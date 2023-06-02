@@ -1,0 +1,51 @@
+@import "../../styles/common";
+
+.input-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+
+  .input-title {
+    font-size: 1rem;
+    color: #000;
+  }
+  .error-text {
+    position: absolute;
+    bottom: -1.75rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem !important;
+  }
+  .input-box {
+    position: relative;
+    .eye {
+      position: absolute;
+      inset: 50% 0.75rem auto auto;
+      transform: translateY(-50%);
+      color: black;
+    }
+  }
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.bns-inputs {
+  .input-title {
+    color: #ffffff;
+    font-size: 1.1rem !important;
+    font-weight: 400;
+  }
+  .input-box {
+    input {
+      background-color: #151515;
+      border: 1px solid #4e5d5f;
+      height: 3rem;
+      outline: 0;
+      box-shadow: none;
+      color: #ffffff;
+      font-size: 1rem !important;
+    }
+  }
+}

@@ -1,0 +1,299 @@
+@import "../../../../styles/common";
+.domain-compare-section {
+  position: relative;
+  background-color: #1e2728;
+  padding: 5rem 0;
+  @media screen and (max-width: 580px) {
+    padding: 3rem 0;
+  }
+  .sec-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    h2 {
+      font-family: $chakrapetch;
+      font-weight: 600;
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      text-align: center;
+      @media screen and (max-width: 580px) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      color: #ffffffcc;
+      font-size: 1.2rem;
+      max-width: 45rem;
+      @media screen and (max-width: 580px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .domain-compare-card-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem auto 1rem;
+    gap: 2rem 6rem;
+    max-width: 74rem;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      gap: 6rem 2rem;
+      max-width: 30rem;
+    }
+
+    li {
+      position: relative;
+      width: calc(50% - 4rem);
+      @media screen and (max-width: 991px) {
+        width: calc(50% - 4rem);
+      }
+      @media screen and (max-width: 767px) {
+        width: calc(100%);
+      }
+      &:first-child {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 2.5rem;
+        }
+        &::before {
+          content: "VS";
+          position: absolute;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          left: 100%;
+          top: 0;
+          bottom: 0;
+          padding: 2.2rem;
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: #b8c7ca;
+          font-family: $chakrapetch;
+          @media screen and (max-width: 767px) {
+            justify-content: center;
+            top: 100%;
+            left: 0;
+            right: 0;
+            bottom: initial;
+            padding: 3.2rem 0;
+          }
+        }
+      }
+      .domain-compare-card {
+        position: relative;
+        background: transparent
+          linear-gradient(120deg, #222f30 0%, #2d3d3e 100%) 0% 0% no-repeat
+          padding-box;
+        padding: 2rem 2rem;
+        border-radius: 0.5rem;
+        height: 100%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: url("../../../../images/bns/card-boxed-bg.svg");
+          background-size: contain;
+          z-index: 0;
+        }
+        &.dark-bg {
+          background: transparent
+            linear-gradient(120deg, #101e21 0%, #101e21 100%) 0% 0% no-repeat
+            padding-box;
+          &:before {
+            filter: brightness(0.5);
+            opacity: 0.6;
+          }
+        }
+        .content-box {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+          height: 100%;
+          .img-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            background: #101e21;
+            padding: 1rem;
+            border-radius: 50rem;
+            animation: spin 4s linear infinite;
+            img {
+              height: 3.5rem;
+              width: 3.5rem;
+              display: table;
+            }
+            svg {
+              color: #beef53;
+              background: #000;
+              padding: 0.2rem;
+              font-size: 2.5rem;
+              border-radius: 50rem;
+            }
+          }
+          h5 {
+            color: #ffffffe6;
+            font-weight: 600;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+          }
+          .conversion-block {
+            position: relative;
+            &.dns,
+            &.gns {
+              &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                color: #d0f75e;
+                padding-left: 6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                font-size: 1.3rem;
+                letter-spacing: 0.03rem;
+                animation: blinker 1.5s linear infinite;
+                text-shadow: 0rem 0rem 0rem #7df380;
+              }
+            }
+            &.dns {
+              &::before {
+                content: "DNS";
+              }
+            }
+            &.gns {
+              &::before {
+                content: "GNS";
+              }
+            }
+            .conversion-input {
+              padding: 0.4rem 1.6rem;
+              background-color: #151515;
+              border: 0.05rem solid #4e5d5f;
+              border-radius: 0.4rem;
+              position: relative;
+
+              h6 {
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                // border-right: 0.15em solid #d0f75e; /* The typwriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                font-weight: 400;
+                font-size: 1.3rem;
+                animation: typing 4.5s steps(40, end) infinite;
+                // ,
+                //   blink-caret 0.75s step-end infinite;
+              }
+            }
+            svg {
+              font-size: 3rem;
+              padding: 0.2rem;
+              margin: 1rem 0;
+              transform: rotate(0deg) translate3d(0, 0, 0);
+              color: #ffffffe6;
+              animation: shake 4s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: rotate(0deg) translate3d(0, -1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: rotate(0deg) translate3d(0, 2px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(0deg) translate3d(0, -4px, 0);
+  }
+
+  40%,
+  60% {
+    transform: rotate(0deg) translate3d(0, 4px, 0);
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  55% {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+// @keyframes blink-caret {
+//   from,
+//   to {
+//     border-color: transparent;
+//   }
+//   50% {
+//     border-color: #d0f75e;
+//   }
+// }
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes blinker {
+  0%,
+  100% {
+    // opacity: 1;
+    // transform: scale(1);
+    text-shadow: 0rem 0rem 0rem #7df380;
+  }
+  50% {
+    // opacity: 0.6;
+    // transform: scale(0.8);
+    text-shadow: 0rem 0rem 2rem #7df380;
+  }
+}
+@keyframes blinker {
+  0%,
+  100% {
+    // opacity: 1;
+    // transform: scale(1);
+    text-shadow: 0rem 0rem 0rem #7df380;
+  }
+  50% {
+    // opacity: 0.6;
+    // transform: scale(0.8);
+    text-shadow: 0rem 0rem 1rem #7df380;
+  }
+}

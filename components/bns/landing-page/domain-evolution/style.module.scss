@@ -1,0 +1,178 @@
+@import "../../../../styles/common"; // Hero section
+.domain-evolution-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #1e2728;
+  padding: 5rem 0;
+  @media screen and (max-width: 580px) {
+    padding: 3rem 0;
+  }
+  .sec-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    h2 {
+      font-family: $chakrapetch;
+      font-weight: 600;
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      text-align: center;
+      @media screen and (max-width: 580px) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      color: #ffffffcc;
+      font-size: 1.2rem;
+      max-width: 45rem;
+      @media screen and (max-width: 580px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .content-block {
+    position: relative;
+    .evolution-info-list {
+      position: relative;
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      li {
+        color: #d0f75e;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border-right: 0.08rem solid #ffffff;
+        padding: 0 1rem;
+        line-height: 1.2;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+    .evolution-marque {
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 15rem;
+        z-index: 3;
+        @media screen and (max-width: 520px) {
+          width: 8rem !important;
+        }
+      }
+      &::before {
+        right: 0;
+        background: linear-gradient(
+          270deg,
+          #1e2728 10%,
+          #1e2728 16%,
+          transparent
+        );
+      }
+      &::after {
+        left: 0;
+        background: linear-gradient(
+          90deg,
+          #1e2728 10%,
+          #1e2728 16%,
+          transparent
+        );
+      }
+    }
+    .marquee-logo-list {
+      padding: 0;
+      list-style: none;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      justify-content: flex-start;
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+      }
+      li {
+        scroll-snap-align: center;
+        background: #ebf4f4;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        margin: 0 0.3rem;
+        img {
+          height: 2.6rem;
+          width: auto;
+        }
+      }
+    }
+    .evolution-btn-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 4rem 0 0;
+      .theme-btn {
+        display: block;
+        margin: 0 0.3rem 0;
+        transition: 0.3s;
+        position: relative;
+        text-transform: capitalize;
+        border: solid 1px #ef9e5e !important;
+        background: #ef9e5e;
+        color: #101e21 !important;
+        border-radius: 0.5rem;
+        font-family: "proxima-nova" !important;
+        font-weight: 600;
+        padding: 0.6rem 1.8rem;
+        font-size: 1.1rem;
+        height: 100%;
+        white-space: nowrap;
+        &:hover,
+        &:focus,
+        &:active {
+          border: solid 1px #ef9e5e !important;
+          background: transparent;
+          color: #ef9e5e !important;
+        }
+      }
+      .secondary-btn {
+        color: #ef9e5e;
+        display: block;
+        margin: 0 0.3rem 0;
+        transition: 0.3s;
+        position: relative;
+        text-transform: capitalize;
+        background: transparent;
+        border: solid 1px #ef9e5e;
+        border-radius: 0.5rem;
+        font-family: "proxima-nova" !important;
+        font-weight: 600;
+        padding: 0.6rem 1.8rem;
+        font-size: 1.1rem;
+        height: 100%;
+        white-space: nowrap;
+        &:hover,
+        &:focus,
+        &:active {
+          border: solid 1px #ef9e5e !important;
+          background: #ef9e5e;
+          color: #101e21 !important;
+        }
+      }
+    }
+  }
+}

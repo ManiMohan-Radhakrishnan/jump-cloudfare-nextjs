@@ -1,0 +1,133 @@
+@import "../../../../styles/common";
+.blockchain-agnostic-section {
+  position: relative;
+  padding: 5rem 0;
+  background-color: #101e21;
+  @media screen and (max-width: 580px) {
+    padding: 3rem 0;
+  }
+  .sec-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    h2 {
+      font-family: $chakrapetch;
+      font-weight: 600;
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      text-align: center;
+      @media screen and (max-width: 580px) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      color: #ffffffcc;
+      font-size: 1.2rem;
+      max-width: 45rem;
+      @media screen and (max-width: 580px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .multi-blockchain-card-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem auto 1rem;
+    gap: 1rem;
+    max-width: 64rem;
+    li {
+      width: calc(33% - 1rem);
+      @media screen and (max-width: 991px) {
+        width: calc(50% - 1rem);
+      }
+      @media screen and (max-width: 580px) {
+        width: calc(100%);
+      }
+      .multi-blockchain-card {
+        position: relative;
+        background: transparent
+          linear-gradient(120deg, #222f30 0%, #2d3d3e 100%) 0% 0% no-repeat
+          padding-box;
+        padding: 2rem 2rem;
+        border-radius: 0.5rem;
+        height: 100%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: url("../../../../images/bns/card-boxed-bg.svg");
+          background-size: contain;
+          z-index: 0;
+        }
+        &.light-bg {
+          background: transparent
+            linear-gradient(120deg, #2d3d3e66 0%, #2d3d3e47 100%) 0% 0%
+            no-repeat padding-box;
+          &::before {
+            opacity: 0.5;
+          }
+        }
+        .content-box {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+          height: 100%;
+          .img-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            img {
+              height: 7rem;
+              width: 7rem;
+              display: table;
+            }
+            svg {
+              color: #beef53;
+              background: #000;
+              padding: 0.2rem;
+              font-size: 2.5rem;
+              border-radius: 50rem;
+            }
+          }
+          p {
+            color: #ffffffbf;
+            font-weight: 400;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+          }
+          .theme-btn {
+            background: #ef9f5e;
+            border: 0.05rem solid #ef9f5e;
+            padding: 0.6rem 1.6rem;
+            font-size: 1rem;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &:hover,
+            &:focus,
+            &:active {
+              border: 0.05rem solid #ef9f5e;
+              background-color: transparent;
+              color: #ef9f5e;
+            }
+            svg {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
