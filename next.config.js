@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextBuildId = require("next-build-id");
 const nextConfig = {
-  target: "serverless",
+  // target: "serverless",
   experimental: {
     images: {
       allowFutureImage: true,
