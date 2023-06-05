@@ -38,7 +38,6 @@ const NFTMedia = ({
 
   const [listedShare, setListedShare] = useState(false);
   const imgRef = useRef();
-  const [zoomAmount, setZoomAmount] = useState(1);
 
   const nft_role = nft?.core_statistics?.role?.value;
   const isLand = nft_role === "Land";
@@ -50,23 +49,6 @@ const NFTMedia = ({
     setLiked(isFav);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFav]);
-
-  const handleZoom = (zoom = "") => {
-    if (!zoom || !imgRef?.current) return;
-    const MIN_ZOOM = 1;
-    const MAX_ZOOM = 3;
-    const zoomAmt = zoomAmount;
-    if (zoom === "+") {
-      zoomAmt = zoomAmount >= MAX_ZOOM ? zoomAmount : zoomAmount + 1;
-      imgRef.current.style.transform = `scale(${zoomAmt})`;
-      setZoomAmount(zoomAmt);
-    }
-    if (zoom === "-") {
-      zoomAmt = zoomAmount <= MIN_ZOOM ? zoomAmount : zoomAmount - 1;
-      imgRef.current.style.transform = `scale(${zoomAmt})`;
-      setZoomAmount(zoomAmt);
-    }
-  };
 
   const handleLike = async () => {
     if (!user)

@@ -167,7 +167,7 @@ const Prebook = ({
     if (isRewardsEnabled) payment_include.push("reward_point");
     if (isJTEnabled) payment_include.push("jump_point");
     try {
-      const result = {};
+      let result = {};
       setPriceLoading(true);
       if (modalState?.loot_status === LOOT_STATUS.PRE_BOOK)
         result = await getPrebookPriceBreakup({
