@@ -7,9 +7,7 @@ const nextConfig = {
       allowFutureImage: true,
     },
     optimizeCss: true,
-    experimental: {
-      runtime: "experimental-edge",
-    },
+    runtime: "experimental-edge",
   },
   reactStrictMode: true,
   swcMinify: true,
