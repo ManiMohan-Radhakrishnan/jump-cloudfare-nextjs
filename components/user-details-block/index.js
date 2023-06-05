@@ -12,7 +12,6 @@ import {
 } from "../../utils/methods";
 import RecentSoldLoader from "../loaders/recentSoldCardLoader";
 import { CELEBRITIES } from "../../utils/celebrity-config";
-import BnsNFTCard from "../bns/nft-card";
 
 const UserDetailsBlock = ({ userDetail }) => {
   const router = useRouter();

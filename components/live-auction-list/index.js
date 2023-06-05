@@ -11,7 +11,6 @@ import { validateCurrency } from "../../utils/common";
 import { useRouter } from "next/router";
 import { liveAuctionNFTsApi } from "../../utils/methods";
 import RaddxNFTCard from "../raddx/nft-card";
-import BnsNFTCard from "../bns/nft-card";
 
 const LiveAuctionsList = () => {
   const router = useRouter();

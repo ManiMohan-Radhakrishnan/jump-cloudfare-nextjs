@@ -23,7 +23,6 @@ import { FaCheckCircle } from "react-icons/fa";
 import { BiCaretDown } from "react-icons/bi";
 import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
 import RaddxNFTCard from "../raddx/nft-card";
-import BnsNFTCard from "../bns/nft-card";
 
 const DiscoverNFTs = ({ categories }) => {
   const router = useRouter();

@@ -19,7 +19,6 @@ import { FILTERS } from "./filter-config";
 import MclFilters from "./MclFilters";
 import RaddxFilters from "./RaddxFilters";
 import BnsFilters from "./BnsFilters";
-import BnsNFTCard from "../bns/nft-card";
 
 const HEADER_META_DATA = {
   [CELEBRITIES.mcl.name]: {

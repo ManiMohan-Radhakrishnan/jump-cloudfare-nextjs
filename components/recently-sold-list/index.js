@@ -14,7 +14,6 @@ import {
   nftRecentlySoldApiList,
 } from "../../utils/methods";
 import RaddxNFTCard from "../raddx/nft-card";
-import BnsNFTCard from "../bns/nft-card";
 
 const RecentlySoldList = () => {
   const router = useRouter();

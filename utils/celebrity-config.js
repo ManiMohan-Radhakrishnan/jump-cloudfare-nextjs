@@ -3,10 +3,6 @@ import DetailsRaddx from "../components/raddx/details";
 import OrderDetails from "../components/order-details";
 import OrderDetailsRaddx from "../components/raddx/order-details";
 
-import DetailsBns from "../components/bns/details";
-
-import OrderDetailsBns from "../components/bns/order-details";
-
 export const CELEBRITIES = Object.freeze({
   mcl: {
     name: "mcl",
@@ -29,8 +25,8 @@ export const CELEBRITIES = Object.freeze({
     gameName: "bns",
     exploreUrl: "/nft-marketplace/bns",
     celebrityName: "BNS", //! TEMPORARY CELEBRITY NAME - THIS MIGHT CHANGE IN THE FUTURE
-    orderdetails: OrderDetailsBns,
-    details: DetailsBns,
+    orderdetails: OrderDetails,
+    details: Details,
   },
   DEFAULT: {
     name: "mcl",

@@ -18,7 +18,6 @@ import { nftCategoryListApi } from "../../utils/methods";
 import useWindowUtils from "../../hooks/useWindowUtils";
 import RaddxNFTCard from "../raddx/nft-card";
 import { CELEBRITIES } from "../../utils/celebrity-config";
-import BnsNFTCard from "../bns/nft-card";
 
 const Explore = ({ categoryDetail, slug, clientUrl = "", categoryList }) => {
   const { width } = useWindowUtils();
