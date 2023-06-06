@@ -573,15 +573,15 @@ const NFTPutOnSale = ({
     }
   };
 
-  // const calculateTotalAmount = (buyAmount, taxAmount, tdsAmount) => {
-  //   const ba = roundDown(parseFloat(buyAmount), 2);
-  //   const tx = parseFloat((ba * taxAmount) / 100);
-  //   const total = ba - tx;
-  //   const tds = parseFloat((total * tdsAmount) / 100);
-  //   if (user?.apply_sale_tds && !isNaN(tds)) total -= tds;
-  //   let fixedDecimalLength = getDecimalInfo(total);
-  //   return currencyFormat(total, "USD", fixedDecimalLength);
-  // };
+  const calculateTotalAmount = (buyAmount, taxAmount, tdsAmount) => {
+    const ba = roundDown(parseFloat(buyAmount), 2);
+    const tx = parseFloat((ba * taxAmount) / 100);
+    const total = ba - tx;
+    const tds = parseFloat((total * tdsAmount) / 100);
+    if (user?.apply_sale_tds && !isNaN(tds)) total -= tds;
+    let fixedDecimalLength = getDecimalInfo(total);
+    return currencyFormat(total, "USD", fixedDecimalLength);
+  };
 
   return (
     <>
@@ -1535,12 +1535,12 @@ const NFTPutOnSale = ({
                                     <li className={"final-set"}>
                                       <span className="key">Final Amount </span>
                                       <span className="value">
-                                        {/* {calculateTotalAmount(
+                                        {calculateTotalAmount(
                                           erc721Sale?.buyAmount,
                                           parseFloat(nft?.royalties) +
                                             parseFloat(nft?.service_fee),
                                           nft?.tds_rate
-                                        )} */}
+                                        )}
                                       </span>
                                     </li>
                                   </>
